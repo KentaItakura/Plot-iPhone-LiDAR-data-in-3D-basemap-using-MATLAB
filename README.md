@@ -18,9 +18,13 @@
 
 [https://note.com/iwamah1/n/nc8a5427157ef](https://note.com/iwamah1/n/nc8a5427157ef)
 
-なお、3次元モデルをエキスポートする際は、一番下のLAS形式を選択してください。
+PCに転送（エキスポート）する方法は以下の図の通りです。右下のShareボタンから行うことができます。
 
 ![image_0.png](README_images/image_0.png)
+
+なお、3次元モデルをエキスポートする際は、一番下のLAS形式を選択してください。
+
+![image_1.png](README_images/image_1.png)
 
 なお、ここで用いたコードや、点群ファイルは以下のページにアップロードされています。ぜひ、ダウンロードしてお使いください。
 
@@ -70,7 +74,7 @@ UTMは、ユニバーサル横メルカトル（Universal Transverse Mercator）
 
 `projcrs`オブジェクトの中身は以下のようになっています。Nameには、投影方法が書いています。`lengthUnit`では、単位（メートル）が、`ProjectionMethod`には、投影方法が書いています。
 
-![image_1.png](README_images/image_1.png)
+![image_2.png](README_images/image_2.png)
 
 さらに、ここの、`GeographicCRS`は、`geocrs`オブジェクトが格納されており、その中身は以下のようになっています。
 
@@ -82,7 +86,7 @@ WGS 84についてですが、地球はおおよそ球体をしており、そ�
 
   
 
-![image_2.png](README_images/image_2.png)
+![image_3.png](README_images/image_3.png)
 
 ## 経度・緯度への変換
 
@@ -107,11 +111,11 @@ hold on;geobasemap('topographic')
 
 `geobasemap('topographic')`
 
-![image_3.png](README_images/image_3.png)
+![image_4.png](README_images/image_4.png)
 
 さきほどの初めの図は少しわかりにくかったですが、樹木の点群を上から見た時のプロットを示しています。
 
-![image_4.png](README_images/image_4.png)
+![image_5.png](README_images/image_5.png)
 
   
 # 3次元マップでの点群の可視化
@@ -145,7 +149,7 @@ geoplot3(g,lat,lon,ptCloud.Location(:,3)-mean(ptCloud.Location(:,3)),'r','Marker
    -  `'HeightReference','terrain'`: 高さの基準を設定する。このほかに、`'geoid'` や`'ellipsoid'`が選択可能である。それぞれの違いについては、以下の図を参照して下さい。 
    -  `'MarkerIndices'`にて間引きを行わないと、表示が非常の重くなるため注意する必要がある。 
 
-![image_5.png](README_images/image_5.png)
+![image_6.png](README_images/image_6.png)
 
 **図表出展: 国土地理院 ジオイドとは**
 
